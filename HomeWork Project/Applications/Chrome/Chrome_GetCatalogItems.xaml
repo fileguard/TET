@@ -1,0 +1,123 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Chrome_AddQueueItems" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="URLTable" Type="OutArgument(sd:DataTable)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>764,892</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Chrome_AddQueueItems_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="66">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="31">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Chrome_AddQueueItems" sap:VirtualizedContainerService.HintSize="476,826.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="Chrome_GetCatalogItems" Name="ComponentName" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,93.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[ComponentName+&quot;: STARTED&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Open catalog" sap:VirtualizedContainerService.HintSize="434,467.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="9ae91767-35f3-4c47-80b8-25505bae6996" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Get Item names and their urls" sap:VirtualizedContainerService.HintSize="376,250.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[URLTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='ItemName'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='ItemUrl'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text' name2='Column1' attr2='href'&gt;&lt;webctrl tag='div' idx='8' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='5' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='2' /&gt;&lt;/column&gt;&lt;/extract&gt;" ExtractSimilar="True" sap:VirtualizedContainerService.HintSize="334,156.8" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="9ae91767-35f3-4c47-80b8-25505bae6996" Version="V1">
+              <uix:NExtractData.NextLink>
+                <uix:TargetAnchorable BrowserURL="https://www.tet.lv/veikals/viedierices/viedpulksteni-un-aproces/viedie-pulksteni.html?_ga=2.201572372.480786058.1645734752-801125054.1645734752" DesignTimeRectangle="1665, 697, 48, 48" FriendlyName="'A'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a' href='/veikals/viedierices/viedpulksteni-un-aproces/viedie-pulksteni.h*' idx='6' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' href='/veikals/viedierices/viedpulksteni-un-aproces/viedie-pulksteni.h*' aaname='' tag='A' /&gt;" Guid="365e0600-f424-4f03-aa1e-8f9f34ccd1d7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAJOgAACToAYJjBRwAAAKtSURBVGhD7ZhbisIwFIZnN+7AjbgCV+B+3IH7EcQHL4gPooiID+qDZPhKE2pN2jQ5qROYDwY6scn5/9xO0h+VOf8G4PV6qdvtpo7Ho9rtdmq1WqnlcqkWi0XxxzNl/MY7vEsdCaIMIGS/3xciEXc6nYqy5/P5JpBnyviNd3iXOtSlLIYgA9frVW02G7XdbtXlcgnqTepQlzZoizZD6GTg8XgUvUfQ2J6rQlu0SdvE6IK3AXqLYT+fz2WJPLRNDGL54mWAhbder9X9fi9L0kEMYhHTh1YDh8OhGFqpXcMHYhGT2G00GtDb4rcgdttIOA0wDxnKPnu+DrHR0LQmrAbYCVhMfcz5NtCAFtfuZDXA0KXcbbqCFtdU/jBAQmFP/mugyZbsPgyQFSWTlBRoQludNwM6I/5VbCeANwMcrrpkQRuj0SjZ1os2NFYxBtiyWO2x2+ZsNlODwUDN5/OyRA6bRmOAoZHqOcQPh8MkJtBYnUbGABmPs7oUqUygsZqdjYG6MwlSmKjPFGOAKx+3JmmkTaARrRpjgHtr7AJ2IWkCjWjVGAOs7pSMx2M1mUzK/+Koau3FAMKlxIPVQKopJC3eOYVSLGJp8eBcxNLbaArx4NxGJRNZKvHgTGR1Z6GkFA/1mWIMsDjqB6UQptNp+SSPTaMxABLH6ZQ0HqeBocn6QgNZXykh+0s9sNKz/awC2X/YAlZ8tp8WNWQ8ieQWCrGrWddGowHI+vO6hl5gKPtYE8QgVlvPa7wMAPOQxZRyd6JtYnQ5DXgbAHYChtaWEWPQJwDadu02LjoZ0JBQyIoEpbdC1gd1qEsbtGVLUj4EGdDQcxyuGHZ6j7M6ZdyaqqZ4pozfeId3qUPd2JGMMqBBIEL0tsuVj3srIvnjmTJ+4x3eDRk1GyIGvknmBpT6BTg6bnLfjRD7AAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Viedpulksteņi - Tet.lv e-veikals' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NExtractData.NextLink>
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="8, -3190, 1903, 5030" FriendlyName="'&lt;iframe src=&quot;https://ww…'" FullSelectorArgument="&lt;webctrl tag='BODY' /&gt;" Guid="2e917fbc-332b-4fc4-b41f-fc5525d6c500" InformativeScreenshot="cb25659684ba99d2dcbeb7c0632a7fcd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Viedpulksteņi - Tet.lv e-veikals' /&gt;" SearchSteps="Selector" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="94950f7f9c942cf87e1f549cec632f57.png" Selector="&lt;html app='chrome.exe' title='Viedpulksteņi - Tet.lv e-veikals'/&gt;" Url="https://www.tet.lv/veikals/viedierices/viedpulksteni-un-aproces/viedie-pulksteni.html?_ga=2.201572372.480786058.1645734752-801125054.1645734752#page=1&amp;per_page=90" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,93.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[ComponentName+&quot;: FINISHED&quot;]" />
+  </Sequence>
+</Activity>
